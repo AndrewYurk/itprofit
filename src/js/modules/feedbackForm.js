@@ -11,12 +11,12 @@ export function initFeedbackForm() {
     const formData = new FormData(form);
     const jsonData = Object.fromEntries(formData.entries());
     try {
+      document.querySelector('.contact-loading').classList.add('show')
       const response = await fetch("http://localhost:3000/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jsonData),
       });
-      document.querySelector('.contact-loading').classList.add('show')
       const result = await response.json();
       handleResponse(result);
     } catch (error) {
