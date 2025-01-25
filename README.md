@@ -1,10 +1,11 @@
-Installation
+
+## Installation
 
 ```bash
 npm install
 ```
 
-Basic commands
+## Basic commands
 
 ```bash
 npm start # Running in production
