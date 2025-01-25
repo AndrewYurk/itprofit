@@ -1,0 +1,131 @@
+@use "./variables" as *;
+
+.hero-content {
+  background: linear-gradient(to top left, #ffffff 50%, #0d83fd40);
+  padding-top: 9rem;
+
+  .hero-image {
+    position: relative;
+    min-height: 350px;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .customers-badge {
+    position: absolute;
+    max-width: 250px;
+    bottom: 10px;
+    right: 30px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: float-badge 3s ease-in-out infinite;
+    will-change: transform;
+
+    @keyframes float-badge {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .customer-avatars {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      .avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-left: -8px;
+      }
+  
+      .avatar.more {
+        background-color: $primary-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: $grey-color;
+    }
+  }
+
+  h1 {
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .btn {
+    padding: 1rem 2rem; 
+  }
+
+  .stats-row {
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 10px 0px #bbbbbb52;
+    -moz-box-shadow: 0px 5px 10px 0px #bbbbbb52;
+    box-shadow: 0px 5px 10px 0px #bbbbbb52;
+    padding: 1rem 0;
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      padding: 2rem 2rem;
+
+      &:hover {
+        .stat-icon {
+          background-color:$primary-color;
+          color: white;
+        }
+      }
+
+      .stat-content {
+        margin-left: 1rem;
+
+        h4 {
+          margin: 0;
+          margin-bottom: 1rem;
+          font-weight: 500;
+          font-size: 22px;
+        }
+
+        p {
+          margin: 0;
+          color: $grey-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}

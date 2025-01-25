@@ -1,0 +1,65 @@
+# Test Project
+
+## Description
+
+This project uses Express.js for the backend, Webpack for frontend bundling, and Jest for testing.
+
+## Installation
+
+To install all dependencies, run the following command:
+
+```bash
+npm install
+```
+
+## Running the Project
+
+To run the project in production mode, use the following command:
+
+```bash
+npm start
+```
+
+## Running in Development Mode
+
+To run the project in development mode, use the following command:
+
+```bash
+npm run dev
+```
+
+This script runs two processes concurrently using concurrently:
+Webpack — serves the frontend in development mode.
+Nodemon — automatically restarts the server when backend files change.
+
+## Building the Project
+
+To build the project for production, use the following command:
+
+```bash
+npm run build
+```
+
+This script builds the project using Webpack in production mode.
+
+## Testing
+
+To run tests using Jest, execute the following command:
+
+```bash
+npm test
+```
+
+This script runs Jest to test your code.
+
+## Technologies
+
+Express.js — for the backend.
+
+Webpack — for bundling and serving the frontend.
+
+Jest — for testing.
+
+Concurrently — for running multiple processes simultaneously in development mode.
+
+Nodemon — for automatically restarting the server during development.

@@ -1,0 +1,79 @@
+@use "./variables" as *;
+
+.faq {
+  background-color: #f3f9ff;
+
+  .faq-title {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 992px) {
+    .faq-arrow {
+      display: none;
+    }
+  }
+
+  .accordion {
+    overflow: hidden;
+
+    .accordion-item {
+      margin: 1rem;
+      border-radius: 15px;
+      background-color: white;
+
+      .accordion-header {
+        margin: 0;
+        padding: 1.5rem;
+      
+        .accordion-button {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          font-family: system-ui;
+          background-color: white;
+          font-weight: 500;
+          color: #2d465e;
+          border: none;
+          font-size: 1rem;
+          cursor: pointer;
+          outline: none;
+          transition: 0.3s;
+
+          &:hover {
+            color: $primary-color;
+          }
+
+          i {
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+            color: #2d465e;
+            transition: transform 0.2s ease;
+          }
+          
+          &[aria-expanded="true"] i {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .accordion-body {
+        padding: 0 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+
+        &.active {
+          max-height: 200px;
+          padding: 1rem;
+        }
+
+        p {
+          margin: 0;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}

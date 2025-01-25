@@ -1,0 +1,47 @@
+@use "./variables" as *;
+
+.features-cards {
+  .feature-box {
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 100%;
+
+    &.yellow {
+      background-color: #fff3e2;
+
+      i {
+        color: #edb86e;
+      }
+    }
+    &.blue {
+      background-color: #deedfd;
+
+      i {
+        color: #20a5f8;
+      }
+    }
+    &.green {
+      background-color: #d5f1e4;
+
+      i {
+        color: #48c88a;
+      }
+    }
+    &.red {
+      background-color: #fdeded;
+
+      i {
+        color: #f28484;
+      }
+    }
+    p {
+      font-size: 15px;
+    }
+
+    i {
+      font-size: 40px;
+      padding: 1rem;
+    }
+  }
+}

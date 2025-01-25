@@ -1,0 +1,65 @@
+@use "./variables" as *;
+
+#footer {
+  padding: 3rem;
+  padding-bottom: 1rem;
+
+  @media (max-width: 992px) {
+    .col-4 { flex: 0 0 100%; max-width: 50%; }
+  }
+
+  .footer-about {
+    min-width: 13rem;
+
+    a {
+      text-decoration: none;
+      color: #2d465e;
+      font-weight: 600;
+      font-size: 20px;
+      display: inline;
+    }
+  }
+
+  .footer-links {
+    h4 {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: #2d465e;
+        border-bottom: 2px solid transparent;
+        transform: 0.3s;
+
+        &:hover {
+          border-bottom: 2px solid #2d465e;
+        }
+      }
+    }
+  }
+
+  .copyright p {
+    font-size: 14px;
+    margin: 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e7e7e7;
+  }
+}
+
+@media (max-width: 992px) {
+  #footer {
+    padding: 1rem;
+
+    .footer-about {
+      text-align: center;
+    }
+
+    .footer-links {
+      text-align: center;
+    }
+  }
+}

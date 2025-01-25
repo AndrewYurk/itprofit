@@ -1,0 +1,176 @@
+@use "./variables" as *;
+
+.contact {
+  .btn {
+    font-size: 17px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+  }
+
+  .contact-info {
+    background-color: $primary-color;
+    color: white;
+    height: 100%;
+    box-sizing: border-box;
+
+    .info-item {
+      .icon-box {
+        min-width: 64px;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#ffffff4a;
+        color: white;
+        border-radius: 50px;
+        transition: 0.3s;
+        font-size: 20px;
+      }
+  
+      &:hover {
+        .icon-box {
+          background-color: #ffffff6a;
+        }
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    p {
+      color: #ffffffad;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+
+      .info-content {
+        margin-left: 1rem;
+
+        h4 {
+          margin: 0;
+          margin-bottom: 0.5rem;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .contact-form-block {
+    -webkit-box-shadow: 0px 0px 10px 5px #bbbbbb52;
+    -moz-box-shadow: 0px 0px 10px 5px #bbbbbb52;
+    box-shadow: 0px 0px 10px 5px #bbbbbb52;
+    position: relative;
+    padding: 0;
+
+    .contact-loading {
+      position: absolute;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      background-color: #ffffff75;
+      font-size: 50px;
+      color: $primary-color;
+
+      &.show {
+        visibility: visible;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .spinner {
+        display: inline-block;
+        animation: spin 1s linear infinite;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    .contact-success {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      background-color: white;
+
+      &.show {
+        display: flex;
+      }
+
+      i {
+        font-size: 150px;
+        color: #48c88a;
+        margin: 3rem;
+      }
+
+      .btn {
+        margin: 3rem;
+      }
+    }
+
+    .contact-form {
+      h2 {
+        font-weight: 400;
+        margin-top: 0;
+      }
+
+      .col-6 {
+        padding: 0 0.5rem;
+      }
+
+      .col-12 {
+        padding: 0 0.5rem;
+      }
+
+      .error {
+        border: 1px solid red;
+      }
+      .error-message {
+        position: absolute;
+        padding: 0.2rem;
+        color: red;
+        font-size: 12px;
+        display: block;
+      }
+
+      input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 45px;
+        border: 1px solid #21252926;
+        border-radius: 10px;
+        padding: 0 1rem;
+        font-size: 15px;
+        resize: none;
+      }
+
+      input::placeholder, textarea::placeholder {
+        color: $grey-color;
+      }
+
+      input:focus, textarea:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+
+      textarea {
+        min-height: 150px;
+        padding: 1rem 1rem;
+      }
+    }
+  }
+}

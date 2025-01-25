@@ -1,0 +1,54 @@
+@use "./variables" as *;
+
+.features {
+  .btn-group {
+    background-color: #22262a0c;
+    padding: 0.35rem;
+
+    .btn {
+      padding: 0.75rem 2rem;
+      background-color: transparent;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &.active {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    
+  }
+
+  .tab-content {
+    .tab-pane {
+      display: none;
+  
+      &.active {
+        display: flex;
+      }
+
+      h2 {
+        padding-bottom: 1rem;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: $primary-color;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      p {
+        font-style: italic;
+      }
+    }
+  }
+}

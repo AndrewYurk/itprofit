@@ -1,0 +1,91 @@
+<div class="container section-title mb-5">
+  <h1>Contact</h1>
+  <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-5 my-3">
+      <div class="contact-info rounded p-5">
+        <h2>Contact Info</h2>
+        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+        <div class="info-item mb-4">
+          <div class="info-icon">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="info-content">
+            <h4>Our Location</h4>
+            <p class="m-0">A108 Adam Street</p>
+            <p class="m-0">New York, NY 535022</p>
+          </div>
+        </div>
+        <div class="info-item mb-4">
+          <div class="info-icon">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+          </div>
+          <div class="info-content">
+            <h4>Phone Number</h4>
+            <p class="m-0">+1 5589 55488 55</p>
+            <p class="m-0">+1 6678 254445 41</p>
+          </div>
+        </div>
+        <div class="info-item mb-4">
+          <div class="info-icon">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+          </div>
+          <div class="info-content">
+            <h4>Email Address</h4>
+            <p class="m-0">info@example.com</p>
+            <p class="m-0">contact@example.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-7 my-3">
+      <div class="contact-form-block rounded">
+        <div class="contact-loading rounded d-flex align-items-center">
+          <i class="fa-solid fa-spinner spinner"></i>
+        </div>
+        <div class="contact-success rounded d-flex align-items-center">
+          <div class="text-center p-5">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Your application has been successfully submitted!</h2>
+            <button type="button" class="btn btn-primary" id="new-msg">New Message</button>
+          </div>
+        </div>
+        <div class="contact-form p-5">
+          <h2>Contact Us</h2>
+          <p class="mb-4">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+          <form id="feedbackForm">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <input type="text" id="name" class="form-control" name="name" placeholder="Your Name">
+                <small class="error-message" id="error-name"></small>
+              </div>
+              <div class="col-6 mb-4">
+                <input type="text" id="email" class="form-control" name="email" placeholder="Your Email">
+                <small class="error-message" id="error-email"></small>
+              </div>
+              <div class="col-6 mb-4">
+                <input type="text" id="phone" class="form-control" name="phone" placeholder="Your Phone" autocomplete="off">
+                <small class="error-message" id="error-phone"></small>
+              </div>
+              <div class="col-12 mb-4">
+                <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message"></textarea>
+                <small class="error-message" id="error-message"></small>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

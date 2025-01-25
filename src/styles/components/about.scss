@@ -1,0 +1,116 @@
+@use "./variables" as *;
+
+.about {
+  .feature-list {
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      i {
+        color: $primary-color;
+        padding: 0.75rem;
+      }
+    }
+  }
+
+  .image-wrapper {
+    position: relative;
+    padding-top: 5rem;
+    min-height: 350px;
+
+    .img-fluid {
+      border-radius: 10px;
+    }
+
+    .small-image {
+      position: absolute;
+      top: 30%;
+      left: -10%;
+      width: 45%;
+      border: 8px solid white;
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      background-color: $primary-color;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      min-width: 200px;
+      animation: experience-float 3s ease-in-out infinite;
+
+      @keyframes experience-float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 400;
+
+        span {
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  span {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+
+    .profile-position {
+      color: $primary-color;
+      font-size: 13px;
+    }
+
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0.5rem;
+    }
+
+    p {
+      line-height: normal;
+    }
+  }
+
+  .contact-info {
+    -webkit-box-shadow: 0px 0px 10px 2px #bbbbbb52;
+    -moz-box-shadow: 0px 0px 10px 2px #bbbbbb52;
+    box-shadow: 0px 0px 10px 2px #bbbbbb52;
+    border-radius: 10px;
+
+    i {
+      font-size: 25px;
+      color: $primary-color;
+      padding: 0.75rem 1rem 0.25rem 1rem;
+    }
+
+    .contact-number {
+      font-weight: 800;
+    }
+  }
+}
